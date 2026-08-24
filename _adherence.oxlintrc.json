@@ -1,0 +1,182 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Adelphe|BBB Poppins TN))/i]",
+        "message": "Font not provided by the design system. Available: Adelphe, BBB Poppins TN."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--bg-default",
+      "--bg-paper",
+      "--bw-bold",
+      "--bw-hair",
+      "--bw-rule",
+      "--c-black",
+      "--c-danger",
+      "--c-dark-blue",
+      "--c-dark-green",
+      "--c-dark-red",
+      "--c-grey-100",
+      "--c-grey-300",
+      "--c-grey-50",
+      "--c-grey-500",
+      "--c-grey-800",
+      "--c-info",
+      "--c-light-blue",
+      "--c-mustard",
+      "--c-orange",
+      "--c-pink",
+      "--c-purple",
+      "--c-red",
+      "--c-success",
+      "--c-warning",
+      "--c-white",
+      "--c-yellow",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-out",
+      "--ease-spring",
+      "--ff-mono",
+      "--ff-sans",
+      "--ff-serif",
+      "--fg-mute",
+      "--fg-on-dark",
+      "--fg-on-light",
+      "--fs-body",
+      "--fs-eyebrow",
+      "--fs-h1",
+      "--fs-h2",
+      "--fs-h3",
+      "--fs-h4",
+      "--fs-hero",
+      "--fs-small",
+      "--lh-body",
+      "--lh-snug",
+      "--lh-tight",
+      "--ls-caps",
+      "--ls-display",
+      "--ls-tight",
+      "--r-0",
+      "--r-pill",
+      "--s-1",
+      "--s-10",
+      "--s-2",
+      "--s-3",
+      "--s-4",
+      "--s-5",
+      "--s-6",
+      "--s-7",
+      "--s-8",
+      "--s-9"
+    ],
+    "tokenKinds": {
+      "--c-dark-red": "color",
+      "--c-dark-green": "color",
+      "--c-dark-blue": "color",
+      "--c-pink": "color",
+      "--c-purple": "color",
+      "--c-red": "color",
+      "--c-orange": "color",
+      "--c-light-blue": "color",
+      "--c-yellow": "color",
+      "--c-mustard": "color",
+      "--c-white": "color",
+      "--c-grey-50": "color",
+      "--c-grey-100": "color",
+      "--c-grey-300": "color",
+      "--c-grey-500": "color",
+      "--c-grey-800": "color",
+      "--c-black": "color",
+      "--bg-default": "color",
+      "--bg-paper": "color",
+      "--fg-on-light": "color",
+      "--fg-on-dark": "color",
+      "--fg-mute": "color",
+      "--c-success": "color",
+      "--c-warning": "color",
+      "--c-danger": "color",
+      "--c-info": "color",
+      "--ff-serif": "other",
+      "--ff-sans": "other",
+      "--ff-mono": "other",
+      "--fs-hero": "other",
+      "--fs-h1": "other",
+      "--fs-h2": "other",
+      "--fs-h3": "spacing",
+      "--fs-h4": "spacing",
+      "--fs-body": "spacing",
+      "--fs-small": "spacing",
+      "--fs-eyebrow": "spacing",
+      "--lh-tight": "other",
+      "--lh-snug": "other",
+      "--lh-body": "other",
+      "--ls-tight": "spacing",
+      "--ls-display": "spacing",
+      "--ls-caps": "spacing",
+      "--s-1": "spacing",
+      "--s-2": "spacing",
+      "--s-3": "spacing",
+      "--s-4": "spacing",
+      "--s-5": "spacing",
+      "--s-6": "spacing",
+      "--s-7": "spacing",
+      "--s-8": "spacing",
+      "--s-9": "spacing",
+      "--s-10": "spacing",
+      "--r-0": "spacing",
+      "--r-pill": "spacing",
+      "--bw-hair": "spacing",
+      "--bw-rule": "spacing",
+      "--bw-bold": "spacing",
+      "--ease-out": "other",
+      "--ease-spring": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "Adelphe",
+      "BBB Poppins TN"
+    ]
+  }
+}

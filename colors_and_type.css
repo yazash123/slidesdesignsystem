@@ -1,0 +1,286 @@
+/* ==========================================================================
+   HOUSE OF THE PEOPLE — Foundations
+   colors + type tokens (low-level) and semantic styles (high-level)
+   ========================================================================== */
+
+/* ---------- FONTS ----------
+   Family names below match the OTF internal names exactly:
+   - "Adelphe"          (weights 400 Regular, 600 SemiBold; both italics)
+   - "BBB Poppins TN"   (weights 400 Text Regular, 700 Text Bold; both italics)
+   Both fonts are open-source and ship with the brand. Use them anywhere.
+*/
+@font-face {
+  font-family: "Adelphe";
+  src: url("fonts/Adelphe-FlorealRegular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Adelphe";
+  src: url("fonts/Adelphe-FlorealItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Adelphe";
+  src: url("fonts/Adelphe-FlorealSemiBold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Adelphe";
+  src: url("fonts/Adelphe-FlorealSemiBoldItalic.otf") format("opentype");
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+
+@font-face {
+  font-family: "BBB Poppins TN";
+  src: url("fonts/BBBPoppinsTN-TextRegular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "BBB Poppins TN";
+  src: url("fonts/BBBPoppinsTN-TextRegularItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "BBB Poppins TN";
+  src: url("fonts/BBBPoppinsTN-TextBold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "BBB Poppins TN";
+  src: url("fonts/BBBPoppinsTN-TextBoldItalic.otf") format("opentype");
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
+:root {
+  /* ----------------------------------------------------------------
+     PALETTE — 10 brand colours in 3 tonal groups.
+
+     The brand rule, from the typography guidelines:
+       "As you see in the logotypes the main colours are one dark,
+       one light and one medium. Keep to this principle when you
+       combine colours in designs — i.e. think about getting
+       representation from the 3 groups whenever possible."
+
+     Text colour rule:
+       - BLACK on medium and light backgrounds
+       - WHITE on dark backgrounds
+     ---------------------------------------------------------------- */
+
+  /* DARK — text on these is WHITE */
+  --c-dark-red:    #C0184F;   /* crimson / hot-pink red */
+  --c-dark-green:  #387030;   /* forest */
+  --c-dark-blue:   #5878A0;   /* chambray */
+
+  /* MEDIUM — text on these is BLACK */
+  --c-pink:        #E078B0;
+  --c-purple:      #B868C0;
+  --c-red:         #E06050;   /* coral red */
+  --c-orange:      #E08850;
+
+  /* LIGHT — text on these is BLACK */
+  --c-light-blue:  #C0E8F8;
+  --c-yellow:      #F0E060;   /* banana */
+  --c-mustard:     #E0C060;   /* deeper yellow */
+
+  /* NEUTRALS — white, grey scale, black */
+  --c-white:       #FFFFFF;
+  --c-grey-50:     #F5F5F5;
+  --c-grey-100:    #E5E5E5;
+  --c-grey-300:    #B5B5B5;
+  --c-grey-500:    #6B6B6B;
+  --c-grey-800:    #2A2A2A;
+  --c-black:       #0A0A0A;
+
+  /* ----------------------------------------------------------------
+     SEMANTIC FG / BG
+     Defaults to BLACK ink on LIGHT BLUE paper — the safest brand-
+     consistent surface. Avoid plain white backgrounds in graphics;
+     pick a colour from the 10-swatch palette instead.
+     ---------------------------------------------------------------- */
+  --bg-default:  var(--c-light-blue);
+  --bg-paper:    var(--c-white);          /* for body copy in long-form documents */
+  --fg-on-light: var(--c-black);
+  --fg-on-dark:  var(--c-white);
+  --fg-mute:     var(--c-grey-500);
+
+  /* Status (used sparingly) */
+  --c-success: var(--c-dark-green);
+  --c-warning: var(--c-mustard);
+  --c-danger:  var(--c-dark-red);
+  --c-info:    var(--c-dark-blue);
+
+  /* ----------------------------------------------------------------
+     TYPOGRAPHY
+     Two typefaces, used equally. Both can be used for headlines AND
+     body. Mix them within a layout for visual rhythm.
+       Adelphe (serif)       — has personality, warmer
+       BBB Poppins TN (sans) — geometric, sturdy
+     Two weights only: 400 Regular (body), 600/700 SemiBold (titles).
+     ---------------------------------------------------------------- */
+  --ff-serif: "Adelphe", "GT Sectra", Georgia, serif;
+  --ff-sans:  "BBB Poppins TN", "Poppins", system-ui, -apple-system, sans-serif;
+  --ff-mono:  "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Type scale */
+  --fs-hero:    clamp(64px, 9vw, 140px);
+  --fs-h1:      clamp(44px, 6vw, 80px);
+  --fs-h2:      clamp(32px, 4vw, 56px);
+  --fs-h3:      24px;
+  --fs-h4:      18px;
+  --fs-body:    16px;
+  --fs-small:   14px;
+  --fs-eyebrow: 12px;
+
+  --lh-tight: 1.0;
+  --lh-snug:  1.1;
+  --lh-body:  1.4;
+
+  --ls-tight:   -0.02em;
+  --ls-display: -0.01em;
+  --ls-caps:     0.08em;
+
+  /* ----------------------------------------------------------------
+     SPACING (4px base)
+     ---------------------------------------------------------------- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  /* ----------------------------------------------------------------
+     RADII — almost always 0. Bricks are square. Containers are
+     square. The very occasional pill is allowed for chips.
+     ---------------------------------------------------------------- */
+  --r-0:    0px;
+  --r-pill: 999px;
+
+  /* ----------------------------------------------------------------
+     BORDERS
+     ---------------------------------------------------------------- */
+  --bw-hair: 1px;
+  --bw-rule: 1.5px;
+  --bw-bold: 2px;
+
+  /* ----------------------------------------------------------------
+     MOTION
+     ---------------------------------------------------------------- */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 360ms;
+}
+
+/* ----------------------------------------------------------------
+   SEMANTIC TYPOGRAPHY
+   Mix serif + sans freely. Two weights only: 400 and 600/700.
+   ---------------------------------------------------------------- */
+
+html {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg-on-light);
+  background: var(--bg-default);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.t-hero, h1.hero {
+  font-family: var(--ff-serif);
+  font-weight: 600;
+  font-size: var(--fs-hero);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-display);
+  text-wrap: balance;
+}
+
+.t-h1, h1 {
+  font-family: var(--ff-serif);
+  font-weight: 600;
+  font-size: var(--fs-h1);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-display);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.t-h2, h2 {
+  font-family: var(--ff-sans);
+  font-weight: 700;
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-display);
+  text-wrap: balance;
+  margin: 0;
+}
+
+.t-h3, h3 {
+  font-family: var(--ff-sans);
+  font-weight: 700;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.t-h4, h4 {
+  font-family: var(--ff-sans);
+  font-weight: 700;
+  font-size: var(--fs-h4);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.t-body, p {
+  font-family: var(--ff-sans);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+.t-lead {
+  font-family: var(--ff-sans);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.t-small {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-small);
+  line-height: 1.45;
+}
+
+.t-eyebrow {
+  font-family: var(--ff-sans);
+  font-weight: 700;
+  font-size: var(--fs-eyebrow);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-caps);
+}
+
+.t-quote {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.t-mono {
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+
+.t-serif { font-family: var(--ff-serif); }
+.t-sans  { font-family: var(--ff-sans); }

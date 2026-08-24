@@ -1,0 +1,46 @@
+/* Shared base for design-system preview cards.
+   Cards are NO-title; the asset name renders outside.
+   No padding around tiles — they bleed edge to edge per the
+   tile-layout principle. */
+@import url("../colors_and_type.css");
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--c-light-blue);
+  color: var(--c-black);
+  font-family: var(--ff-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Tile grid — the canonical card layout */
+.tiles { display: grid; width: 100%; min-height: 100vh; }
+.tile { padding: 24px; display: flex; flex-direction: column; gap: 12px; justify-content: flex-end; }
+.tile.center { justify-content: center; align-items: center; }
+.tile.top { justify-content: flex-start; }
+
+.lbl {
+  font-family: var(--ff-sans);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Dark backgrounds — white text */
+.bg-dark-red, .bg-dark-green, .bg-dark-blue, .bg-black { color: var(--c-white); }
+.bg-dark-red   { background: var(--c-dark-red); }
+.bg-dark-green { background: var(--c-dark-green); }
+.bg-dark-blue  { background: var(--c-dark-blue); }
+.bg-black      { background: var(--c-black); }
+
+/* Medium / light — black text */
+.bg-pink       { background: var(--c-pink); }
+.bg-purple     { background: var(--c-purple); }
+.bg-red        { background: var(--c-red); }
+.bg-orange     { background: var(--c-orange); }
+.bg-light-blue { background: var(--c-light-blue); }
+.bg-yellow     { background: var(--c-yellow); }
+.bg-mustard    { background: var(--c-mustard); }
+.bg-white      { background: var(--c-white); }
