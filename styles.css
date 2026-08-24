@@ -1,0 +1,6 @@
+/* House of the People — Slide Show Design System
+   Consumers link this one file. Imports only. */
+@import "tokens/fonts.css";
+@import "tokens/colors.css";
+@import "tokens/type.css";
+@import "tokens/slide.css";
