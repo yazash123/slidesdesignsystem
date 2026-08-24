@@ -1,0 +1,27 @@
+/* Two typefaces. Two weights each. Nothing else. */
+
+@font-face {
+  font-family: "Adelphe";
+  src: url("../fonts/Adelphe-FlorealRegular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Adelphe";
+  src: url("../fonts/Adelphe-FlorealSemiBold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Adelphe";
+  src: url("../fonts/Adelphe-FlorealItalic.otf") format("opentype");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "BBB Poppins TN";
+  src: url("../fonts/BBBPoppinsTN-TextRegular.otf") format("opentype");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "BBB Poppins TN";
+  src: url("../fonts/BBBPoppinsTN-TextBold.otf") format("opentype");
+  font-weight: 700; font-style: normal; font-display: swap;
+}

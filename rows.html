@@ -1,0 +1,61 @@
+<!-- CARD group="Slides" viewport="1920x1080" name="B — Field slide: numbered rows" subtitle="Prose + quote panel beside stacked colour bands" -->
+<!-- @startingPoint section="Field slide" subtitle="Prose + quote panel beside stacked colour bands" viewport="1920x1080" -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Numbered rows slide</title>
+<!--MEGACSS-->
+<style>
+  html, body { margin: 0; }
+  .row { display:flex; align-items:center; gap:36px; padding:44px; }
+  .row .num { font:600 46px/1 var(--ff-serif); width:52px; flex:none; }
+  .row .lab { font:700 34px/1.1 var(--ff-sans); width:400px; flex:none; }
+  .row .note { font:400 26px/1.3 var(--ff-sans); }
+</style>
+</head>
+<body>
+<div class="hotp-slide" style="display:flex; flex-direction:column;">
+  <div style="flex:1; padding:72px var(--pad-edge) 0;">
+    <div class="eyebrow" style="margin-bottom:28px;">
+      <span class="chip" style="background:var(--c-coral);"></span>setting off
+    </div>
+    <h1 class="t-h1" style="margin:0 0 56px;">A note for the road ahead: be specific.</h1>
+
+    <div style="display:flex; gap:88px; align-items:flex-start;">
+      <div style="flex:0 0 700px;">
+        <p class="t-body" style="margin:0 0 44px;">The term <strong>&ldquo;AI&rdquo; gets attached to some very different things</strong>. Over the next few months you&rsquo;ll hear it in the news, at work, in these sessions &mdash; and it won&rsquo;t always be clear what&rsquo;s being meant.</p>
+        <div style="background:var(--c-forest); color:var(--ink-inverse); padding:56px;">
+          <div class="t-eyebrow" style="color:var(--c-banana); margin-bottom:28px;">if things aren&rsquo;t clear, you can ask:</div>
+          <p class="t-question" style="margin:0;">&ldquo;What are we actually talking about?&rdquo;</p>
+        </div>
+      </div>
+
+      <div style="flex:1;">
+        <div class="t-eyebrow" style="margin-bottom:28px;">so, before we open the bonnet</div>
+        <!-- bands stack with no gaps and no field colour between them -->
+        <div style="display:flex; flex-direction:column;">
+          <div class="row" style="background:var(--c-orange);">
+            <span class="num">1</span><span class="lab">Definitions</span><span class="note">what the word is supposed to mean</span>
+          </div>
+          <div class="row" style="background:var(--c-pink);">
+            <span class="num">2</span><span class="lab">History</span><span class="note">seventy years of using the same label</span>
+          </div>
+          <div class="row" style="background:var(--c-mustard);">
+            <span class="num">3</span><span class="lab">The films</span><span class="note">the versions that exist in our heads</span>
+          </div>
+          <div class="row" style="background:var(--c-crimson); color:var(--ink-inverse);">
+            <span class="num">4</span><span class="lab">Then, the engine</span><span class="note">how the thing actually works</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- callout banner, flush to the slide edge: closes the slide, no field left over -->
+  <div style="background:var(--c-chambray); color:var(--ink-inverse); padding:40px var(--pad-edge);">
+    <p class="t-lead" style="margin:0; font-weight:700;">Whenever &ldquo;AI&rdquo; comes up this sitting, ask which of these four we are talking about.</p>
+  </div>
+</div>
+</body>
+</html>

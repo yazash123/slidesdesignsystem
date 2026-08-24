@@ -1,0 +1,49 @@
+<!-- CARD group="Slides" viewport="1920x1080" name="B — Field slide: numbers" subtitle="White panel example beside bars, square-bullet footnotes" -->
+<!-- @startingPoint section="Bar slide" subtitle="White panel example beside bars, square-bullet footnotes" viewport="1920x1080" -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Numbers slide</title>
+<!--MEGACSS-->
+<style>
+  html, body { margin: 0; }
+  .barrow { display:flex; align-items:center; gap:28px; }
+  .barrow .key { background:var(--panel); padding:18px 0; width:220px; text-align:center; font:700 32px/1 var(--ff-sans); }
+  .barrow .track { flex:1; height:56px; background:var(--c-grey-soft); }
+  .barrow .fill { height:100%; background:var(--c-forest); }
+  .barrow .pct { width:120px; font:700 32px/1 var(--ff-sans); text-align:right; }
+</style>
+</head>
+<body>
+<div class="hotp-slide">
+  <div style="padding:72px var(--pad-edge) 0;">
+    <div class="eyebrow" style="margin-bottom:28px;">
+      <span class="chip" style="background:var(--c-coral);"></span>idea 3 &mdash; the chatbot
+    </div>
+    <h1 class="t-h1" style="margin:0 0 80px;">ChatGPT&rsquo;s actual job: to guess the next word.</h1>
+
+    <div style="display:flex; gap:88px; align-items:flex-start;">
+      <div style="flex:0 0 780px; background:var(--panel); padding:64px;">
+        <div class="t-eyebrow" style="color:var(--ink-mute); margin-bottom:40px;">the text so far</div>
+        <p style="margin:0; font:600 56px/1.1 var(--ff-serif);">Once upon a <span style="border-bottom:6px solid var(--ink); padding:0 60px;"></span></p>
+      </div>
+
+      <div style="flex:1;">
+        <div class="t-eyebrow" style="margin-bottom:36px;">its guesses for the next word</div>
+        <div style="display:flex; flex-direction:column; gap:26px;">
+          <div class="barrow"><span class="key">time</span><span class="track"><span class="fill" style="width:97%;"></span></span><span class="pct">97%</span></div>
+          <div class="barrow"><span class="key">tree</span><span class="track"><span class="fill" style="width:2%;"></span></span><span class="pct" style="color:var(--ink-mute);">2%</span></div>
+          <div class="barrow"><span class="key">mattress</span><span class="track"><span class="fill" style="width:1%;"></span></span><span class="pct" style="color:var(--ink-mute);">1%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:120px; margin-top:110px;">
+      <p class="t-body bullet" style="margin:0; max-width:520px;">Trained on a huge slice of the internet&rsquo;s text.</p>
+      <p class="t-body bullet" style="margin:0; max-width:700px;">Then nudged toward answers people rate as helpful, known as &ldquo;reinforcement learning&rdquo;.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

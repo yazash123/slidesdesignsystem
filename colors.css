@@ -1,0 +1,39 @@
+/* ---------------------------------------------------------------
+   COLOURS — 10 brand colours, sampled from the real slide decks.
+   Three tonal groups. Every composition takes one from each group.
+   Text is WHITE on dark, BLACK on medium and light. No exceptions.
+   --------------------------------------------------------------- */
+:root {
+  /* DARK — white text */
+  --c-crimson:    #C0184F;
+  --c-forest:     #387030;
+  --c-chambray:   #5878A0;
+
+  /* MEDIUM — black text (white is allowed on pink/purple/coral for
+     short all-caps tile labels only — see readme) */
+  --c-pink:       #E078B0;
+  --c-purple:     #B868C0;
+  --c-coral:      #E06050;
+  --c-orange:     #E08850;
+
+  /* LIGHT — black text */
+  --c-sky:        #C0E8F8;   /* the default slide field */
+  --c-banana:     #F0E060;
+  --c-mustard:    #E0C060;
+
+  /* INK & PAPER */
+  --c-black:      #0A0A0A;
+  --c-white:      #FFFFFF;
+  --c-cream:      #FDFCF3;   /* softer panel white, used on dark fields */
+  --c-grey:       #6B6B6B;   /* labels on white panels only */
+  --c-grey-soft:  #E5E5E5;   /* empty bar track in charts */
+
+  /* ROLES */
+  --field:        var(--c-sky);       /* default slide background */
+  --field-alt:    var(--c-chambray);  /* activity / discussion slides */
+  --panel:        var(--c-white);     /* content panel on a field */
+  --ink:          var(--c-black);
+  --ink-inverse:  var(--c-white);
+  --ink-mute:     var(--c-grey);
+  --highlight:    var(--c-banana);    /* text highlighter */
+}

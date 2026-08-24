@@ -1,0 +1,45 @@
+<!-- CARD group="Slides" viewport="1920x1080" name="C — Tiled slide: word grid" subtitle="Dense glossary of terms, one word per tile" -->
+<!-- @startingPoint section="Tiled slide" subtitle="Dense glossary of terms, one word per tile" viewport="1920x1080" -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Word grid</title>
+<!--MEGACSS-->
+<style>
+  html, body { margin: 0; }
+  .word { display:flex; align-items:center; justify-content:center; text-align:center; padding:28px;
+    font:700 30px/1.2 var(--ff-sans); text-transform:uppercase; color:var(--ink-inverse); }
+</style>
+</head>
+<body>
+<div class="hotp-slide">
+  <div class="tile-grid" style="height:100%; grid-template-columns:repeat(5, 1fr); grid-template-rows:212px 1fr 1fr 1fr;">
+    <div class="tile" style="background:var(--c-mustard); color:var(--ink-inverse); align-items:center; grid-column:span 2; padding:0 56px;">
+      <span class="t-title" style="font-size:56px;">community glossary</span>
+    </div>
+    <div class="tile" style="background:var(--c-forest); color:var(--ink-inverse); align-items:center; justify-content:flex-end; grid-column:span 3; padding:0 56px;">
+      <span class="t-eyebrow">the words you&rsquo;ll hear this sitting</span>
+    </div>
+
+    <div class="word" style="background:var(--c-coral);">Artificial intelligence (AI)</div>
+    <div class="word" style="background:var(--c-purple);">Machine learning (ML)</div>
+    <div class="word" style="background:var(--c-mustard);">Data</div>
+    <div class="word" style="background:var(--c-crimson);">Model<br>(&ldquo;AI model&rdquo;)</div>
+    <div class="word" style="background:var(--c-pink);">Training data</div>
+
+    <div class="word" style="background:var(--c-orange);">Generative AI</div>
+    <div class="word" style="background:var(--c-forest);">Chatbot</div>
+    <div class="word" style="background:var(--c-orange);">Large language model (LLM)</div>
+    <div class="word" style="background:var(--c-coral);">AI agent (&ldquo;agentic AI&rdquo;)</div>
+    <div class="word" style="background:var(--c-purple);">Deepfake</div>
+
+    <div class="word" style="background:var(--c-crimson);">Algorithmic bias</div>
+    <div class="word" style="background:var(--c-pink);">Prompt</div>
+    <div class="word" style="background:var(--c-chambray);">Hallucination</div>
+    <div class="word" style="background:var(--c-mustard);">Artificial general intelligence (AGI)</div>
+    <div class="word" style="background:var(--c-forest);">Guardrails</div>
+  </div>
+</div>
+</body>
+</html>

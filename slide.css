@@ -1,0 +1,76 @@
+/* ---------------------------------------------------------------
+   SLIDE GEOMETRY — one canvas, one set of measurements.
+   Everything square. No radii, no shadows, no gutters between tiles.
+   --------------------------------------------------------------- */
+:root {
+  --slide-w: 1920px;
+  --slide-h: 1080px;
+
+  --pad-edge:  88px;   /* content inset on an untiled field */
+  --bar-h:    150px;   /* header bar height */
+  --spine-w:   22px;   /* coloured spine down the left of a panel */
+  --panel-pad: 64px;
+  --stack-gap: 44px;   /* between stacked panels on one slide */
+
+  --bw-rule: 3px;      /* the only border weight */
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- the canvas ------------------------------------------------ */
+.hotp-slide {
+  position: relative;
+  width: var(--slide-w);
+  height: var(--slide-h);
+  overflow: hidden;
+  background: var(--field);
+  color: var(--ink);
+  font-family: var(--ff-sans);
+}
+
+/* --- header bar: title tile + optional duration chip ----------- */
+.slide-bar { display: flex; height: var(--bar-h); }
+.slide-bar > .bar-title {
+  flex: 1;
+  display: flex; align-items: center;
+  padding: 0 var(--pad-edge);
+  font: 600 var(--fs-title)/var(--lh-tight) var(--ff-serif);
+  text-transform: lowercase;
+}
+.slide-bar > .bar-dur {
+  display: flex; align-items: center; padding: 0 56px;
+  background: var(--c-mustard);
+  font: 700 var(--fs-title)/1 var(--ff-sans);
+}
+
+/* --- panel with a coloured spine ------------------------------- */
+.panel {
+  display: flex;
+  background: var(--panel);
+}
+.panel > .spine { width: var(--spine-w); flex: none; }
+.panel > .panel-body { padding: var(--panel-pad); }
+
+/* --- eyebrow with a square colour chip ------------------------- */
+.eyebrow { display: flex; align-items: center; gap: 16px;
+  font: 700 var(--fs-eyebrow)/1 var(--ff-sans);
+  text-transform: uppercase; letter-spacing: var(--ls-caps); }
+.eyebrow > .chip { width: 22px; height: 22px; flex: none; }
+
+/* --- tiles: they touch, they never round ---------------------- */
+.tile-grid { display: grid; gap: 0; }
+.tile { display: flex; padding: 48px; }
+
+/* --- text highlighter ---------------------------------------- */
+mark, .mark { background: var(--highlight); color: var(--ink); padding: 0 .1em; }
+
+/* --- square bullet ------------------------------------------- */
+.bullet { display: flex; gap: 20px; }
+.bullet::before { content: ""; flex: none; width: 18px; height: 18px;
+  background: currentColor; margin-top: .45em; }
+
+/* --- interaction (rarely needed on slides) -------------------- */
+a { color: var(--c-crimson); text-decoration: none;
+  border-bottom: var(--bw-rule) solid currentColor; }
+a:hover { color: var(--c-forest); }

@@ -1,0 +1,45 @@
+<!-- CARD group="Slides" viewport="1920x1080" name="B — Field slide: timeline" subtitle="Where we are in the sitting, with a scaffold anchor" -->
+<!-- @startingPoint section="Field slide" subtitle="Where we are in the sitting, with a scaffold anchor" viewport="1920x1080" -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Timeline slide</title>
+<!--MEGACSS-->
+<style>
+  html, body { margin: 0; }
+  .stop { position:absolute; bottom:0; width:30px; height:76px; background:var(--c-pink); }
+  .stop::after { content:""; position:absolute; bottom:-30px; left:-30px; width:90px; height:30px; background:var(--c-pink); }
+  .stop b { position:absolute; top:106px; left:50%; transform:translateX(-50%); width:250px; text-align:center;
+    font:600 32px/1.1 var(--ff-serif); }
+  .stop i { position:absolute; top:194px; left:50%; transform:translateX(-50%); width:250px; text-align:center;
+    font:400 28px/1.1 var(--ff-sans); font-style:normal; color:var(--c-sky); }
+  .stem { position:absolute; bottom:100%; width:28px; }
+  .stem b { position:absolute; bottom:100%; left:50%; transform:translateX(-50%); width:240px; text-align:center;
+    padding-bottom:20px; font:600 32px/1.1 var(--ff-serif); }
+</style>
+</head>
+<body>
+<div class="hotp-slide" style="background:var(--field-alt); color:var(--ink-inverse);">
+  <img src="A:assets/scaffolds/scaffold-alt.png" alt="" style="position:absolute; right:-380px; bottom:-110px; height:1000px;">
+
+  <h1 class="t-title" style="position:absolute; top:64px; left:var(--pad-edge); margin:0;">the second sitting</h1>
+
+  <!-- bar centre sits at y=853, which is a pink hinge joint on scaffold-alt at this size -->
+  <div style="position:absolute; left:260px; right:568px; top:838px;">
+    <div style="position:relative; height:30px; background:var(--c-forest);">
+      <span style="position:absolute; right:100%; top:50%; transform:translateY(-50%); padding-right:36px; width:200px; text-align:right; font:600 32px/1.15 var(--ff-serif);">you are<br>here</span>
+
+      <div class="stop" style="left:5%;"><b>welcome session</b><i>12 July</i></div>
+      <div class="stop" style="left:30%;"><b>evening sessions</b><i>Sept&ndash;Nov</i></div>
+      <div class="stop" style="left:56%;"><b>online weekend</b><i>24&ndash;25 Oct</i></div>
+      <div class="stop" style="left:80%;"><b>in-person sitting</b><i>27&ndash;29 Nov</i></div>
+
+      <div class="stem" style="left:17%; height:190px; background:var(--c-banana);"><b style="color:var(--c-banana);">workers assembly</b></div>
+      <div class="stem" style="left:43%; height:310px; background:var(--c-sky);"><b style="color:var(--c-sky);">experts feed-in</b></div>
+      <div class="stem" style="left:68%; height:240px; background:var(--c-banana);"><b style="color:var(--c-banana);">community assemblies</b></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

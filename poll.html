@@ -1,0 +1,65 @@
+<!-- CARD group="Slides" viewport="1920x1080" name="A — Bar slide: poll" subtitle="Corner title tile, side note panel, list with dot bullets" -->
+<!-- @startingPoint section="Field slide" subtitle="Corner title tile, side note panel, list with dot bullets" viewport="1920x1080" -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Poll slide</title>
+<!--MEGACSS-->
+<style>html, body { margin: 0; }</style>
+</head>
+<body>
+<div class="hotp-slide" style="background:var(--field-alt);">
+  <!-- corner title tile: a bar slide can wear its title as a tile instead of a full bar -->
+  <div style="position:absolute; top:0; left:0; width:760px; height:196px; background:var(--c-mustard); display:flex; align-items:center; padding:0 var(--pad-edge); box-sizing:border-box;">
+    <span class="t-title">starting views</span>
+  </div>
+
+  <!-- side note panel -->
+  <div class="panel" style="position:absolute; top:76px; right:88px; width:1010px; background:var(--c-sky);">
+    <div class="spine" style="background:var(--c-crimson);"></div>
+    <div class="panel-body" style="padding:36px 44px;">
+      <div class="eyebrow" style="color:var(--c-crimson); margin-bottom:20px;">after you&rsquo;re done</div>
+      <p class="t-lead" style="margin:0 0 14px; font-weight:400; font-family:var(--ff-serif); font-size:38px; line-height:1.15;">In a word or two, how did that discussion feel?</p>
+      <p class="t-small" style="margin:0;">Type into the chat!</p>
+    </div>
+  </div>
+
+  <div class="panel" style="position:absolute; left:88px; right:88px; top:340px; background:var(--c-cream);">
+    <div class="spine" style="background:var(--c-purple);"></div>
+    <div class="panel-body" style="padding:64px 72px; display:flex; gap:80px; flex:1;">
+      <div class="t-eyebrow" style="width:300px; flex:none; line-height:1.6; color:var(--c-chambray);">
+        please answer<br>these
+        <span style="color:var(--c-purple);">four quick questions</span>
+        in the zoom poll
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:30px; flex:1;">
+        <div style="display:flex; gap:28px; align-items:flex-start;">
+          <span style="width:40px; height:40px; border-radius:50%; background:var(--c-purple); flex:none; margin-top:6px;"></span>
+          <div>
+            <p class="t-question" style="margin:0 0 16px; font-size:40px;">How often do you use AI?</p>
+            <p class="t-body" style="margin:0; background:var(--c-purple); color:var(--ink-inverse); display:inline-block; padding:6px 20px;">1: never &nbsp;|&nbsp; 5: once a month &nbsp;|&nbsp; 10: many times a day</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:28px; align-items:center;">
+          <span style="width:40px; height:40px; border-radius:50%; background:var(--c-purple); flex:none;"></span>
+          <p class="t-question" style="margin:0; font-size:40px;">&ldquo;AI poses dangers to society.&rdquo;</p>
+        </div>
+        <div style="display:flex; gap:28px; align-items:center;">
+          <span style="width:40px; height:40px; border-radius:50%; background:var(--c-purple); flex:none;"></span>
+          <p class="t-question" style="margin:0; font-size:40px;">&ldquo;AI will help society advance in many ways.&rdquo;</p>
+        </div>
+        <div style="display:flex; gap:28px; align-items:flex-start;">
+          <span style="width:40px; height:40px; border-radius:50%; background:var(--c-purple); flex:none; margin-top:6px;"></span>
+          <div>
+            <p class="t-question" style="margin:0 0 16px; font-size:40px;">&ldquo;AI will become very important, generations from now.&rdquo;</p>
+            <p class="t-body" style="margin:0; background:var(--c-purple); color:var(--ink-inverse); display:inline-block; padding:6px 20px;">1: strongly disagree &nbsp;|&nbsp; 5: don&rsquo;t know &nbsp;|&nbsp; 10: strongly agree</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

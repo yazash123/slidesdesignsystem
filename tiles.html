@@ -1,0 +1,54 @@
+<!-- CARD group="Slides" viewport="1920x1080" name="C — Tiled slide: statements" subtitle="Full-bleed colour tiles, one statement each, brick course in the sky pocket" -->
+<!-- @startingPoint section="Tiled slide" subtitle="Full-bleed colour tiles, one statement each, brick course in the sky pocket" viewport="1920x1080" -->
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Tiled statements</title>
+<!--MEGACSS-->
+<style>
+  html, body { margin: 0; }
+  .brick-course { position:absolute; display:flex; }
+  .brick-course img { width:320px; height:137px; object-fit:cover; display:block; }
+  .brick-course img + img { margin-left:-1px; }
+</style>
+</head>
+<body>
+<div class="hotp-slide">
+  <!-- every cell is filled: title, one sky pocket for the bricks, six statements -->
+  <div class="tile-grid" style="height:100%; grid-template-columns:repeat(3, 1fr); grid-template-rows:196px 1fr 1fr;">
+    <div class="tile" style="background:var(--c-mustard); align-items:center; grid-column:span 2; padding:0 56px;">
+      <span class="t-title" style="font-size:56px;">group agreements</span>
+    </div>
+    <div style="background:var(--c-sky);"></div>
+
+    <div class="tile" style="background:var(--c-chambray); color:var(--ink-inverse); align-items:center;">
+      <span class="t-tile">Everyone is welcome</span>
+    </div>
+    <div class="tile" style="background:var(--c-purple); color:var(--ink-inverse); align-items:center;">
+      <span class="t-tile">All voices are equal</span>
+    </div>
+    <div class="tile" style="background:var(--c-pink); color:var(--ink-inverse); align-items:center;">
+      <span class="t-tile">What is said here stays here</span>
+    </div>
+
+    <div class="tile" style="background:var(--c-crimson); color:var(--ink-inverse); align-items:center;">
+      <span class="t-tile">We criticise ideas, not people</span>
+    </div>
+    <div class="tile" style="background:var(--c-forest); color:var(--ink-inverse); align-items:center;">
+      <span class="t-tile">We are here to listen, not convince</span>
+    </div>
+    <div class="tile" style="background:var(--c-coral); color:var(--ink-inverse); align-items:center;">
+      <span class="t-tile">Facilitators may step in</span>
+    </div>
+  </div>
+
+  <!-- one flush course, bottom-aligned to the sky pocket, running off the right edge -->
+  <div class="brick-course" style="left:1280px; top:59px;">
+    <img src="A:assets/bricks/tight/blue.png" alt="">
+    <img src="A:assets/bricks/tight/green.png" alt="">
+    <img src="A:assets/bricks/tight/orange.png" alt="">
+  </div>
+</div>
+</body>
+</html>

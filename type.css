@@ -1,0 +1,40 @@
+/* ---------------------------------------------------------------
+   TYPE — sized for a 1920×1080 slide. Nothing below 22px.
+   Adelphe (serif)  = titles, headlines, questions, big numbers.
+   BBB Poppins TN (sans) = eyebrows, labels, body, notes, tile caps.
+   Weights: 400 and 600 (serif) / 700 (sans). That is all.
+   --------------------------------------------------------------- */
+:root {
+  --ff-serif: "Adelphe", Georgia, serif;
+  --ff-sans:  "BBB Poppins TN", "Poppins", system-ui, sans-serif;
+
+  --fs-hero:     104px;  /* one big statement */
+  --fs-stat:     140px;  /* one big number */
+  --fs-title:     64px;  /* slide title in the header bar (lowercase serif) */
+  --fs-h1:        56px;  /* content headline */
+  --fs-question:  46px;  /* discussion prompt inside a panel */
+  --fs-tile:      40px;  /* all-caps sans label inside a colour tile */
+  --fs-lead:      32px;
+  --fs-body:      26px;
+  --fs-small:     22px;
+  --fs-eyebrow:   22px;
+
+  --lh-tight: 1.02;
+  --lh-snug:  1.12;
+  --lh-body:  1.35;
+  --ls-caps:  0.12em;
+}
+
+/* Optional helper classes — tokens are the contract, these are shortcuts. */
+.t-hero     { font: 600 var(--fs-hero)/var(--lh-tight) var(--ff-serif); }
+.t-stat     { font: 600 var(--fs-stat)/0.9 var(--ff-serif); }
+.t-title    { font: 600 var(--fs-title)/var(--lh-tight) var(--ff-serif); text-transform: lowercase; }
+.t-h1       { font: 600 var(--fs-h1)/var(--lh-snug) var(--ff-serif); }
+.t-question { font: 600 var(--fs-question)/var(--lh-snug) var(--ff-serif); }
+.t-tile     { font: 700 var(--fs-tile)/var(--lh-snug) var(--ff-sans); text-transform: uppercase; }
+.t-lead     { font: 400 var(--fs-lead)/var(--lh-body) var(--ff-sans); }
+.t-body     { font: 400 var(--fs-body)/var(--lh-body) var(--ff-sans); }
+.t-small    { font: 400 var(--fs-small)/var(--lh-body) var(--ff-sans); }
+.t-eyebrow  { font: 700 var(--fs-eyebrow)/1 var(--ff-sans); text-transform: uppercase; letter-spacing: var(--ls-caps); }
+.t-serif    { font-family: var(--ff-serif); }
+.t-sans     { font-family: var(--ff-sans); }
